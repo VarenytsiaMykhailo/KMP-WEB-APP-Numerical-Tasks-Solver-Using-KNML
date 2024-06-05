@@ -1,3 +1,4 @@
+### Android gitignore:
 # Gradle files
 .gradle/
 build/
@@ -31,3 +32,22 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+.DS_Store
+
+### KMP gitignore:
+.kotlin
+.gradle
+**/build/
+xcuserdata
+!src/**/build/
+.externalNativeBuild
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+
+
