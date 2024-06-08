@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">KNML Numerical Tasks Solver</string>
+    <string name="back_button">Back</string>
+
+    <string name="choose_method_type">choose method type:</string>
+    <string name="choose_method">choose method:</string>
+
+    <string name="system_solving_methods">System solving methods</string>
+    <string name="integral_methods">Integral methods</string>
+    <string name="query_method">Query</string>
+
+    <string name="gauss_classic_method">Gauss classic method</string>
+    <string name="gauss_pivoting_method">Gauss pivoting method</string>
+    <string name="seidel_method">Seidel method</string>
+    <string name="jacobi_method">Jacobi method</string>
+    <string name="thomas_method">Thomas method</string>
+
+    <string name="simpson_method">Simpson method</string>
+    <string name="trapezoid_method">Trapezoid method</string>
+    <string name="rectangle_method">Rectangle method</string>
+
+    <string name="enter_the_function">enter the function:</string>
+    <string name="use_machine_eps">use machine eps</string>
+    <string name="eps">eps</string>
+    <string name="interval_start">interval start</string>
+    <string name="interval_end">interval end</string>
+    <string name="gauss_pivoting_strategy">Gauss pivoting strategy</string>
+    <string name="form_full_solution">form full solution</string>
+
+    <string name="solve">solve</string>
+    <string name="solve_system">solve system</string>
+    <string name="solve_integral">solve integral</string>
+</resources>

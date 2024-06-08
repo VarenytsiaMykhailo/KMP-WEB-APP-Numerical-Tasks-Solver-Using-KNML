@@ -27,6 +27,8 @@ kotlin {
     }
     
     jvm("desktop")
+
+    val ktor_version="3.0.0-wasm2"
     
     sourceSets {
         val desktopMain by getting
@@ -35,12 +37,29 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.8.0-alpha02")
+            implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+
+            //implementation("io.ktor:ktor-client-core:$ktor_version")
+            //implementation("io.ktor:ktor-client-cio:$ktor_version")
+            implementation(libs.bundles.ktor.common)
+
+            //implementation(files("libs/tmp.jar"))
+            //api(fileTree("libs") { include("*.jar") })
+            //implementation(project("/libs/knml-1.0-SNAPSHOT.ja"))
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.8.1")
+
+            implementation(libs.ktor.client.java)
         }
     }
 }
