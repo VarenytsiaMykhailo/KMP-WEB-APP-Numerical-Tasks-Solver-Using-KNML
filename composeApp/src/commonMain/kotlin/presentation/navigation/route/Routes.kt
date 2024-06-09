@@ -1,7 +1,5 @@
 package presentation.navigation.route
 
-const val SELECT_ROUTE_OPTION_SCREEN = "SelectOptionScreen"
-
 sealed interface Route {
     val name: String
         get() = this::class.simpleName!!
