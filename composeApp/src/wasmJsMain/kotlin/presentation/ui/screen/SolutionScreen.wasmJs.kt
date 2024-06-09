@@ -5,7 +5,13 @@ import kotlinx.browser.document
 
 @Composable
 actual fun SolutionScreen(markdownLatexText: String) {
-    document.write(markdownLatexText)
+    document.write(
+        "<button type=\"button\" onclick=\"window.location = '/';\">Назад</button>" +
+                "<br>" +
+                "<textarea>" +
+                markdownLatexText +
+                "</textarea>"
+    )
     renderSolutionPage()
 }
 

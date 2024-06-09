@@ -8,12 +8,11 @@ import numericaltaskssolver.composeapp.generated.resources.Res
 import numericaltaskssolver.composeapp.generated.resources.integral_methods
 import numericaltaskssolver.composeapp.generated.resources.query_method
 import numericaltaskssolver.composeapp.generated.resources.system_solving_methods
-import presentation.navigation.route.OtherScreenRoutes
+import presentation.navigation.route.NavigationStartRouteGroup
 import presentation.navigation.route.RootScreenRoutes
 import presentation.ui.screen.RootScreen
 import presentation.viewmodel.QueryMethodViewModel
 import presentation.viewmodel.SolutionViewModel
-
 
 fun NavGraphBuilder.addRootScreenRoutes(
     //systemSolvingMethodViewModel: SystemSolvingMethodViewModel,
@@ -21,13 +20,13 @@ fun NavGraphBuilder.addRootScreenRoutes(
     queryMethodViewModel: QueryMethodViewModel,
     solutionViewModel: SolutionViewModel,
     navController: NavHostController,
-    rootScreen: String
+    navigationStartRouteGroup: String,
 ) {
     navigation(
-        route = rootScreen,
-        startDestination = OtherScreenRoutes.SelectRouteOptionScreen.routeName,
+        route = navigationStartRouteGroup,
+        startDestination = NavigationStartRouteGroup.RootScreen.routeName,
     ) {
-        composable(route = OtherScreenRoutes.SelectRouteOptionScreen.routeName) {
+        composable(route = NavigationStartRouteGroup.RootScreen.routeName) {
             RootScreen(
                 routeButtons = listOf(
                     Pair(RootScreenRoutes.SystemSolvingMethods, Res.string.system_solving_methods),

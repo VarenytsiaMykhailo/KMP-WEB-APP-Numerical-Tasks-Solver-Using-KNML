@@ -7,6 +7,10 @@ sealed interface Route {
         get() = this::class.qualifiedName!!
 }
 
+sealed class NavigationStartRouteGroup : Route {
+    data object RootScreen : NavigationStartRouteGroup()
+}
+
 sealed class RootScreenRoutes : Route {
     data object SystemSolvingMethods : RootScreenRoutes()
     data object IntegralMethods : RootScreenRoutes()
