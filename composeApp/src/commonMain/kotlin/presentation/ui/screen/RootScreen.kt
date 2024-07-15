@@ -38,7 +38,7 @@ fun RootScreen(
             contentDescription = null,
             contentScale = ContentScale.FillWidth,
             modifier = Modifier
-                .height(300.dp)
+                .height(360.dp)
                 .fillMaxWidth(),
         )
         SelectRouteOptionScreen(

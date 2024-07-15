@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -28,8 +29,6 @@ kotlin {
     
     jvm("desktop")
 
-    val ktor_version="3.0.0-wasm2"
-    
     sourceSets {
         val desktopMain by getting
         
@@ -47,13 +46,9 @@ kotlin {
             implementation("org.jetbrains.androidx.navigation:navigation-compose:2.8.0-alpha02")
             implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
 
-            //implementation("io.ktor:ktor-client-core:$ktor_version")
             //implementation("io.ktor:ktor-client-cio:$ktor_version")
             implementation(libs.bundles.ktor.common)
-
-            //implementation(files("libs/tmp.jar"))
-            //api(fileTree("libs") { include("*.jar") })
-            //implementation(project("/libs/knml-1.0-SNAPSHOT.ja"))
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

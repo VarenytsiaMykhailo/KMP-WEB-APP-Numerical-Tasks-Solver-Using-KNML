@@ -11,12 +11,14 @@ import numericaltaskssolver.composeapp.generated.resources.system_solving_method
 import presentation.navigation.route.NavigationStartRouteGroup
 import presentation.navigation.route.RootScreenRoutes
 import presentation.ui.screen.RootScreen
+import presentation.viewmodel.IntegralMethodViewModel
 import presentation.viewmodel.QueryMethodViewModel
 import presentation.viewmodel.SolutionViewModel
+import presentation.viewmodel.SystemSolvingMethodViewModel
 
 fun NavGraphBuilder.addRootScreenRoutes(
-    //systemSolvingMethodViewModel: SystemSolvingMethodViewModel,
-    //integralMethodViewModel: IntegralMethodViewModel,
+    systemSolvingMethodViewModel: SystemSolvingMethodViewModel,
+    integralMethodViewModel: IntegralMethodViewModel,
     queryMethodViewModel: QueryMethodViewModel,
     solutionViewModel: SolutionViewModel,
     navController: NavHostController,
@@ -38,7 +40,6 @@ fun NavGraphBuilder.addRootScreenRoutes(
                 }
             )
         }
-        /*
         addSystemSolvingMethodsScreenRoutes(
             systemSolvingMethodViewModel = systemSolvingMethodViewModel,
             solutionViewModel = solutionViewModel,
@@ -49,7 +50,6 @@ fun NavGraphBuilder.addRootScreenRoutes(
             solutionViewModel = solutionViewModel,
             navController = navController,
         )
-         */
         addOtherScreenRoutes(
             queryMethodViewModel = queryMethodViewModel,
             solutionViewModel = solutionViewModel,

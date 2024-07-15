@@ -26,14 +26,16 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import presentation.navigation.addRootScreenRoutes
 import presentation.navigation.route.NavigationStartRouteGroup
+import presentation.viewmodel.IntegralMethodViewModel
 import presentation.viewmodel.QueryMethodViewModel
 import presentation.viewmodel.SolutionViewModel
+import presentation.viewmodel.SystemSolvingMethodViewModel
 
 
 @Composable
 fun App(
-    //systemSolvingMethodViewModel: SystemSolvingMethodViewModel = viewModel(),
-    //integralMethodViewModel: IntegralMethodViewModel = viewModel(),
+    systemSolvingMethodViewModel: SystemSolvingMethodViewModel = viewModel { SystemSolvingMethodViewModel() },
+    integralMethodViewModel: IntegralMethodViewModel = viewModel { IntegralMethodViewModel() },
     queryMethodViewModel: QueryMethodViewModel = viewModel { QueryMethodViewModel() },
     solutionViewModel: SolutionViewModel = viewModel { SolutionViewModel() },
     navController: NavHostController = rememberNavController(),
@@ -56,8 +58,8 @@ fun App(
         ) {
 
             addRootScreenRoutes(
-                //systemSolvingMethodViewModel = systemSolvingMethodViewModel,
-                //integralMethodViewModel = integralMethodViewModel,
+                systemSolvingMethodViewModel = systemSolvingMethodViewModel,
+                integralMethodViewModel = integralMethodViewModel,
                 queryMethodViewModel = queryMethodViewModel,
                 solutionViewModel = solutionViewModel,
                 navController = navController,
